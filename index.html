@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Promo Code Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,10 +19,9 @@
                 <option value="4">Train Miner</option>
                 <option value="5">MergeAway (NEW)</option>
                 <option value="6">Twerk Race (NEW)</option>
-
             </select>
         </div>
-        
+
         <div class="form-group">
             <label id="keyCountLabel" for="keyCountSelect">Number of keys:</label>
             <select id="keyCountSelect">
@@ -30,10 +30,9 @@
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="8">8</option>
-                
             </select>
         </div>
-        <button id="startBtn">Generate Keys</button>
+        <button id="startBtn" class="btn btn-primary">Generate Keys</button>
         <div id="progressContainer" class="hidden">
             <div class="progress-bar">
                 <div id="progressBar"></div>
@@ -41,28 +40,26 @@
             <div id="progressText">0%</div>
             <div id="progressLog">Starting...</div>
             <div id="countdownContainer">
-            <p>Next Step will start in: <span id="countdownTimer"></span> seconds </p>
+                <p>Next Step will start in: <span id="countdownTimer"></span> seconds</p>
             </div>
         </div>
         <div id="keyContainer" class="hidden">
             <h3 id="generatedKeysTitle" class="hidden">Generated Keys:</h3>
             <div id="keysList"></div>
-            <button id="copyAllBtn" class="hidden">Copy All Keys</button>
+            <button id="copyAllBtn" class="btn btn-secondary hidden">Copy All Keys</button>
             <div id="copyStatus" class="hidden">Copied!</div>
-            <button id="generateMoreBtn">Generate More Keys</button>
+            <button id="generateMoreBtn" class="btn btn-primary">Generate More Keys</button>
         </div>
         <div class="mycodes">
-            <p>
-                The Key Generation may take upto 10 mins </p>
-            <button id="ShowKeysBtn">My Codes</button>
-            <div id="generatedCodesContainer" style="display:none;">
+            <p class="info-text">The Key Generation may take up to 10 mins</p>
+            <button id="ShowKeysBtn" class="btn btn-info">My Codes</button>
+            <div id="generatedCodesContainer" class="hidden">
                 <h3>Today's Generated Codes:</h3>
                 <ul id="generatedCodesList"></ul>
             </div>
-
         </div>
         <div class="footer">
-            <p>Disclaimer: This tool is for educational purposes only. Use responsibly.       
+            <p>Disclaimer: This tool is for educational purposes only. Use responsibly.</p>
         </div>
     </div>
     <script src="script.js"></script>
