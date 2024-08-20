@@ -1,59 +1,100 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f9;
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .container {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
     max-width: 500px;
     width: 100%;
     text-align: center;
 }
 
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-weight: 700;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #34495e;
 }
 
 select {
     width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-button {
-    background-color: #007bff;
-    color: white;
+select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.btn {
     border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    border-radius: 5px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    font-weight: 500;
 }
 
+.btn:hover {
+    transform: translateY(-2px);
+}
 
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
 
-button:hover {
-    background-color: #0056b3;
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-secondary {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #27ae60;
+}
+
+.btn-info {
+    background-color: #f1c40f;
+    color: #2c3e50;
+}
+
+.btn-info:hover {
+    background-color: #f39c12;
 }
 
 .hidden {
@@ -61,17 +102,17 @@ button:hover {
 }
 
 .progress-bar {
-    background-color: #f0f0f0;
-    border-radius: 5px;
+    background-color: #ecf0f1;
+    border-radius: 6px;
     overflow: hidden;
     margin-top: 20px;
-    height: 30px;
+    height: 24px;
     position: relative;
 }
 
 .progress-bar div {
     height: 100%;
-    background-color: #007bff;
+    background-color: #3498db;
     width: 0;
     transition: width 0.5s;
 }
@@ -79,54 +120,75 @@ button:hover {
 #progressText {
     margin-top: 10px;
     font-weight: bold;
+    color: #2c3e50;
 }
 
 .key-item {
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .key-item input {
     flex: 1;
-    padding: 10px;
+    padding: 12px;
     font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
     margin-right: 10px;
 }
 
 .copyKeyBtn {
-    background-color: #28a745;
+    background-color: #2ecc71;
     border: none;
     padding: 10px 20px;
     color: white;
     font-size: 14px;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .copyKeyBtn:hover {
-    background-color: #218838;
+    background-color: #27ae60;
 }
 
 .footer {
-    margin-top: 20px;
+    margin-top: 30px;
     font-size: 14px;
+    color: #7f8c8d;
 }
 
 #copyStatus {
     margin-top: 10px;
-    color: green;
-}
-
-#telegramChannelBtn{
-    background-color: green;
+    color: #27ae60;
+    font-weight: 500;
 }
 
 #countdownContainer {
     display: none;
     font-size: 1.05em;
-    color: #ff0000;
-    margin: 10px 0;
+    color: #e74c3c;
+    margin: 15px 0;
+    font-weight: 500;
+}
+
+.info-text {
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+#generatedCodesList {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+#generatedCodesList li {
+    background-color: #ecf0f1;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    font-family: monospace;
 }
