@@ -1,88 +1,90 @@
+:root {
+    --bg-color: #0f172a;
+    --text-color: #e2e8f0;
+    --primary-color: #3b82f6;
+    --secondary-color: #10b981;
+    --accent-color: #f43f5e;
+    --container-bg: #1e293b;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #1a1a2e;
-    color: #e0e0e0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
 .container {
-    background-color: #16213e;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    max-width: 500px;
+    background-color: var(--container-bg);
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 400px;
     width: 100%;
-    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1, h3 {
-    color: #4cc9f0;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
     font-weight: 600;
-    margin-bottom: 30px;
 }
 
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
 }
 
 label {
     display: block;
-    margin-bottom: 10px;
-    font-weight: 400;
-    color: #f72585;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
 }
 
-select {
+select, input {
     width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    margin-bottom: 20px;
-    border: 2px solid #4361ee;
-    border-radius: 10px;
-    background-color: #1a1a2e;
-    color: #e0e0e0;
-}
-
-select:focus {
-    outline: none;
-    border-color: #f72585;
+    padding: 0.75rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
 }
 
 .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
     border: none;
-    padding: 14px 28px;
-    font-size: 16px;
-    border-radius: 10px;
-    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
     font-weight: 600;
-    text-transform: uppercase;
-    margin: 10px 5px;
-    transition: background-color 0.3s;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.btn-info {
+    background-color: var(--accent-color);
+    color: var(--text-color);
 }
 
 .btn:hover {
     opacity: 0.9;
-}
-
-.btn-primary {
-    background-color: #4361ee;
-    color: white;
-}
-
-.btn-secondary {
-    background-color: #4cc9f0;
-    color: #1a1a2e;
-}
-
-.btn-info {
-    background-color: #f72585;
-    color: white;
 }
 
 .hidden {
@@ -90,96 +92,74 @@ select:focus {
 }
 
 .progress-bar {
-    background-color: #16213e;
-    border-radius: 10px;
+    background-color: var(--bg-color);
+    border-radius: 4px;
+    height: 10px;
+    margin-top: 1rem;
     overflow: hidden;
-    margin-top: 20px;
-    height: 24px;
-    position: relative;
 }
 
 .progress-bar div {
     height: 100%;
-    background-color: #4cc9f0;
+    background-color: var(--primary-color);
     width: 0;
-    transition: width 0.5s;
+    transition: width 0.3s ease-out;
 }
 
-#progressText {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #4cc9f0;
+#progressText, #progressLog {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
 }
 
 .key-item {
     display: flex;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 1rem;
 }
 
 .key-item input {
-    flex: 1;
-    padding: 12px;
-    font-size: 14px;
-    border: 2px solid #4361ee;
-    border-radius: 10px;
-    margin-right: 10px;
-    background-color: #1a1a2e;
-    color: #e0e0e0;
+    flex-grow: 1;
+    margin-right: 0.5rem;
 }
 
 .copyKeyBtn {
-    background-color: #4cc9f0;
-    border: none;
-    padding: 10px 20px;
-    color: #1a1a2e;
-    font-size: 14px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.footer {
-    margin-top: 30px;
-    font-size: 14px;
-    color: #b5179e;
-}
-
-#copyStatus {
-    margin-top: 15px;
-    color: #4cc9f0;
-    font-weight: 500;
-}
-
-#countdownContainer {
-    font-size: 1.05em;
-    color: #f72585;
-    margin: 15px 0;
-    font-weight: 500;
-}
-
-.info-text {
-    color: #4895ef;
-    font-style: italic;
-    margin-bottom: 20px;
-}
-
-#generatedCodesList {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-}
-
-#generatedCodesList li {
-    background-color: #16213e;
-    margin-bottom: 10px;
-    padding: 15px;
-    border-radius: 10px;
-    font-family: 'Courier New', monospace;
-    border-left: 4px solid #4cc9f0;
+    padding: 0.5rem 1rem;
 }
 
 .button-group {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 1rem;
+}
+
+#copyStatus {
+    margin-top: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.info-text {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+#generatedCodesList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#generatedCodesList li {
+    background-color: var(--bg-color);
+    border-left: 3px solid var(--primary-color);
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0 4px 4px 0;
+}
+
+.footer {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: var(--text-color);
+    opacity: 0.7;
 }
