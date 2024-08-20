@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Promo Code Generator</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -46,9 +46,11 @@
         <div id="keyContainer" class="hidden">
             <h3 id="generatedKeysTitle" class="hidden">Generated Keys:</h3>
             <div id="keysList"></div>
-            <button id="copyAllBtn" class="btn btn-secondary hidden">Copy All Keys</button>
+            <div class="button-group">
+                <button id="copyAllBtn" class="btn btn-secondary hidden">Copy All Keys</button>
+                <button id="generateMoreBtn" class="btn btn-primary">Generate More Keys</button>
+            </div>
             <div id="copyStatus" class="hidden">Copied!</div>
-            <button id="generateMoreBtn" class="btn btn-primary">Generate More Keys</button>
         </div>
         <div class="mycodes">
             <p class="info-text">The Key Generation may take up to 10 mins</p>
